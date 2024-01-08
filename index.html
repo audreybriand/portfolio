@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      header,
+      footer {
+        background-color: #fce4ec; /* Rose pâle */
+        padding: 5%;
+        text-align: center;
+      }
+
+      video {
+        width: 100%;
+        height: auto;
+      }
+
+      footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      footer a {
+        color: #fff;
+        text-decoration: none;
+      }
+
+      .contact-info {
+        text-align: center;
+        flex: 1;
+      }
+
+      .social-logos {
+        text-align: right;
+      }
+
+      .social-logos img {
+        width: 10%;
+        margin-left: 2%;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- En-tête avec la bannière -->
+    <header>
+      <h1>Audrey Briant</h1>
+    </header>
+
+    <!-- Vidéo de présentation -->
+    <video controls>
+      <source src="video.mp4" type="video/mp4" />
+      Votre navigateur ne prend pas en charge la balise vidéo.
+    </video>
+
+    <!-- Footer avec informations de contact -->
+    <footer>
+      <div class="contact-info">
+        <p>Contactez-moi :</p>
+        <p>
+          Email:
+          <a href="mailto:audrey.briand@outlook.fr">audrey.briand@outlook.fr</a>
+        </p>
+        <p>Téléphone:<a href="tel:0618694252"> +33 7 82 25 76</a></p>
+      </div>
+      <div class="social-logos">
+        <a
+          href="https://www.linkedin.com/in/audrey-briand-377b1b292/"
+          target="_blank"
+        >
+          <img src="image/linkedin.png" alt="LinkedIn" />
+        </a>
+        <a
+          href="https://www.instagram.com/audreybriand_/"
+          target="_blank"
+          style="width: 95%; height: auto"
+        >
+          <img src="image/insta.png" alt="Instagram" />
+        </a>
+        <!-- Ajoutez d'autres logos sociaux si nécessaire -->
+      </div>
+    </footer>
+  </body>
+</html>
