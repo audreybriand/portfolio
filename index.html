@@ -9,13 +9,27 @@
         font-family: Arial, sans-serif;
         margin: 0;
         padding: 0;
+        background-color: #f5f5f5; /* Gris clair */
       }
 
       header,
       footer {
-        background-color: #fce4ec; /* Rose pâle */
-        padding: 5%;
+        background-color: #fce4ec; /* Rose foncé */
+        color: #fff; /* Texte blanc */
+        padding: 1%;
         text-align: center;
+      }
+
+      nav {
+        background-color: #fce4ec; /* Rose pâle */
+        text-align: center;
+        padding: 1%;
+      }
+
+      nav a {
+        margin: 0 10px;
+        text-decoration: none;
+        color: #000; /* Texte noir */
       }
 
       video {
@@ -50,21 +64,36 @@
     </style>
   </head>
   <body>
+    <!-- Barre de navigation dans l'entête -->
+
     <!-- En-tête avec la bannière -->
-    <header>
+    <header style="color: black">
       <h1>Audrey Briand</h1>
       <h2>Etudiante en BUT Techniques de Commercialisation</h2>
     </header>
-
-    <!-- Vidéo de présentation -->
-    <video controls>
-      <source src="audrey.mp4" type="video/mp4" />
-      Votre navigateur ne prend pas en charge la balise vidéo.
-    </video>
+    <nav>
+      <a href="#accueil">Accueil</a>
+      <a href="#cv">CV</a>
+    </nav>
+    <section id="accueil">
+      <!-- Vidéo de présentation -->
+      <video controls>
+        <source src="audrey.mp4" type="video/mp4" />
+        Votre navigateur ne prend pas en charge la balise vidéo.
+      </video>
+    </section>
+    <section id="cv">
+      <!-- Ajoutez ici le contenu de la page CV -->
+      <img
+        src="image/cv.png"
+        alt="CV"
+        style="width: 70%; display: block; margin: 0 auto"
+      />
+    </section>
 
     <!-- Footer avec informations de contact -->
     <footer>
-      <div class="contact-info">
+      <div class="contact-info" style="color: black">
         <p>Contactez-moi :</p>
         <p>
           Email:
@@ -73,9 +102,8 @@
           >
         </p>
         <p>
-          Téléphone:<a href="tel:+33782057620" style="color: black">
-            +33 7 82 05 76 20</a
-          >
+          Téléphone:
+          <a href="tel:+33782057620" style="color: black">+33 7 82 05 76 20</a>
         </p>
       </div>
       <div class="social-logos">
@@ -85,15 +113,40 @@
         >
           <img src="image/linkedin.png" alt="LinkedIn" />
         </a>
-        <a
-          href="https://www.instagram.com/audreybriand_/"
-          target="_blank"
-          style="width: 95%; height: auto"
-        >
+        <a href="https://www.instagram.com/audreybriand_/" target="_blank">
           <img src="image/insta.png" alt="Instagram" />
+        </a>
+        <a
+          href="https://www.facebook.com/audrey.briand.98?locale=fr_FR"
+          target="_blank"
+        >
+          <img src="image/facebook.png" alt="Facebook" />
         </a>
         <!-- Ajoutez d'autres logos sociaux si nécessaire -->
       </div>
     </footer>
+
+    <!-- Script JavaScript pour la gestion de la visibilité des sections -->
+    <script>
+      function afficherSection(sectionId) {
+        document.getElementById("accueil").style.display = "none";
+        document.getElementById("cv").style.display = "none";
+        document.getElementById(sectionId).style.display = "block";
+      }
+
+      afficherSection("accueil");
+
+      document
+        .querySelector('nav a[href="#accueil"]')
+        .addEventListener("click", function () {
+          afficherSection("accueil");
+        });
+
+      document
+        .querySelector('nav a[href="#cv"]')
+        .addEventListener("click", function () {
+          afficherSection("cv");
+        });
+    </script>
   </body>
 </html>
